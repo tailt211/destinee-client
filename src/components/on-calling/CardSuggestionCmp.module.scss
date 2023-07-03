@@ -1,0 +1,44 @@
+@import '../../theme/includes';
+
+.cardSuggest {
+    background: rgba(196, 196, 196, 1);
+    font-size: 13px;
+    font-weight: var(--weight-medium);
+    border-radius: 8px;
+    max-height: 80px;
+    width: 95%;
+    margin: auto;
+    padding: 11px 30px;
+    box-shadow: -4px 5px 38px 0px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    p {
+        text-align: center;
+    }
+
+    @include r(MD) {
+        font-size: 11px;
+    }
+
+    &.highlight {
+        background: rgb(255 193 100 / 31%);
+        color: white;
+    }
+
+    &:before {
+        display: inline-block;
+        content: '💡';
+        position: absolute;
+        top: 11px;
+        left: 9px;
+    }
+    &:after {
+        display: inline-block;
+        content: '💡';
+        position: absolute;
+        top: 11px;
+        right: 9px;
+    }
+}

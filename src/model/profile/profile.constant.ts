@@ -1,0 +1,42 @@
+export enum DISPLAY_NAME_OPTION {
+    DISPLAY_NAME = 'DISPLAY_NAME',
+    DISPLAY_NICKNAME = 'DISPLAY_NICKNAME'
+}
+
+export enum REGION {
+    NORTH_VIETNAM = 'NORTH_VIETNAM',
+    MIDDLE_VIETNAM = 'MIDDLE_VIETNAM',
+    SOUTH_VIETNAM = 'SOUTH_VIETNAM',
+    HA_NOI = 'HA_NOI',
+    HO_CHI_MINH = 'HO_CHI_MINH',
+    CAN_THO = 'CAN_THO',
+    KIEN_GIANG = 'KIEN_GIANG',
+    TIEN_GIANG = 'TIEN_GIANG',
+    BAC_NINH = 'BAC_NINH',
+    QUANG_NGAI = 'QUANG_NGAI',
+}
+
+export enum GENDER {
+    MALE = 'MALE',
+    FEMALE = 'FEMALE',
+}
+
+export enum SEX {
+    STRAIGHT = 'STRAIGHT',
+    TOP = 'TOP',
+    BOT = 'BOT',
+}
+
+export enum LANGUAGE {
+    VIETNAMESE = 'VIETNAMESE',
+    ENGLISH = 'ENGLISH',
+    FRENCH = 'FRENCH',
+    GERMAN = 'GERMAN',
+    JAPANESE = 'JAPANESE',
+}
+
+export enum JOB {
+    STUDENT = 'STUDENT',
+    WORKER = 'WORKER',
+    SUPPORTER = 'SUPPORTER',
+}

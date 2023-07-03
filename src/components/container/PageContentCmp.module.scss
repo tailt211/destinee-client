@@ -1,0 +1,29 @@
+@import "../../theme/includes";
+
+.customContent {
+	z-index: 2;
+	
+	&.tabOffset {
+		--offset-bottom: -60px !important;
+	}
+
+	.contentContainer {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 10px; /* bắt buộc là padding, not margin */
+
+		.heading {
+			color: var(--ion-color-white);
+			font-size: 17px;
+			font-weight: var(--weight-medium);
+			text-align: center;
+	
+			@include r(MD) {
+				font-weight: var(--weight-light);
+			}
+		}
+	}
+}

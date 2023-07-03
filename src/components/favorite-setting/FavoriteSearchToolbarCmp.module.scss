@@ -1,0 +1,10 @@
+.searchToolbar {
+    --border-width: 0 !important;
+
+    ion-searchbar {
+        max-width: 443px;
+        margin: auto;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+    }
+}

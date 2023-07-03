@@ -1,0 +1,101 @@
+@import '../../../theme/includes';
+
+.introduction {
+    color: var(--ion-color-black);
+    padding: 18px 5px 0px 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+
+    &.reverse {
+        padding: 18px 19px 0px 12px;
+        align-items: flex-end;
+        text-align: right;
+
+        .badge {
+            margin-left: auto;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &.expand {
+        height: 80%;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2px;
+
+        h6 {
+            font-weight: var(--weight-bold);
+            font-size: 20px;
+            overflow-wrap: anywhere;
+
+            @include r(MS) {
+                font-size: 18px;
+            }
+        }
+
+        ion-icon {
+            zoom: 1.5;
+
+            @include r(MS) {
+                zoom: 1.3;
+            }
+        }
+    }
+
+    .personalInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .skillContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        p {
+            font-weight: var(--weight-light-medium);
+            font-size: 13px;
+
+            @include r(MD) {
+                font-size: 12px;
+            }
+
+            b {
+                font-weight: var(--weight-light-bold);
+            }
+        }
+
+        .skillColorize {
+            b {
+                color: #254f74;
+            }
+        }
+
+        .badge {
+            width: fit-content;
+            font-size: 12px;
+			padding: 2px 6px;
+			border-radius: 10px;
+            margin-top: 2px;
+            color: white;
+		
+			&.mbtiType {
+				background-color: var(--ion-color-green);
+			}
+		}
+    }
+}

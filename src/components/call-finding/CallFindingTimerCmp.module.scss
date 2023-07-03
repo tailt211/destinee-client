@@ -1,0 +1,47 @@
+@import '../../theme/includes';
+
+.timeFinding {
+    background: linear-gradient(
+        180deg,
+        rgba(196, 196, 196, 0) 0%,
+        rgba(58, 175, 169, 0.24) 100%
+    );
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 11px 10px;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+
+    .textDescription {
+        font-size: 0.8125rem;
+        color: var(--ion-color-white);
+        font-weight: var(--weight-light);
+        text-align: center;
+
+        @include r(MS) {
+            font-size: 12px;
+        }
+
+        .onlineCheckLine {
+            height: 0.375rem;
+            width: 0.375rem;
+            border-radius: 133px;
+            background: rgba(58, 175, 169, 1);
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    .cardTextTime {
+        padding-left: 0.6rem;
+        position: relative;
+    }
+}

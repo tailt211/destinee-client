@@ -1,0 +1,106 @@
+@import '../../theme/includes';
+
+.container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    .infoContainer {
+        .title {
+            font-size: 24px;
+            font-weight: var(--weight-medium);
+            color: var(--ion-color-white);
+            text-align: center;
+
+            @include r(MD) {
+                font-size: 22px;
+            }
+
+            @include r(MS) {
+                font-size: 17px;
+            }
+        }
+
+        .timer {
+            font-size: 32px;
+            font-weight: var(--weight-bold);
+            text-align: center;
+            color: var(--ion-color-white);
+
+            @include r(MD) {
+                font-size: 24px;
+            }
+
+            @include r(MS) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .ratingContainer {
+        font-weight: var(--weight-light);
+        color: var(--ion-color-white);
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        width: 80%;
+
+        @include r(MS) {
+            font-size: 14px;
+        }
+
+        span {
+            text-align: center;
+        }
+
+        .starContainer {
+            font-size: 32px;
+            display: flex;
+            flex-direction: row;
+            gap: 7px;
+
+            .activeColor {
+                color: yellow;
+            }
+            .inactiveColor {
+                color: #ccc;
+            }
+        }
+    }
+
+    .personalityContainer {
+        min-height: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 6px 5px;
+        justify-content: center;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    ion-button {
+        width: 170px;
+        min-height: 40px;
+        height: 56px;
+        color: white;
+        margin-top: 15px;
+        --background: var(--ion-color-teal);
+        --box-shadow: 4px -5px 32px 0px rgba(0, 0, 0, 0.75);
+        --border-radius: 10px;
+        --background-activated: var(--ion-color-teal-tint);
+        --background-hover: var(--ion-color-teal-tint);
+        font-size: 16px;
+        font-weight: var(--weight-light);
+    }
+}

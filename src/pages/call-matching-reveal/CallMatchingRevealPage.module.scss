@@ -1,0 +1,150 @@
+@import '../../theme/includes';
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    //gap: 20px;
+    height: 100%;
+    position: relative;
+
+    @media screen and (max-height: 700px) {
+        margin-top: 14px;
+        gap: 10px;
+    }
+
+    .contentHeadingContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+
+        .title {
+            position: relative;
+            padding: 10px 30px;
+            max-width: 355px;
+            background: linear-gradient(180deg, #C4C4C4 0%, #3AAFA9 100%);
+            border-radius: 8px;
+            text-align: center;
+            font-size: 14px;
+            @include r(MD) {
+                font-size: 13px;
+            }
+        
+            @media screen and (max-height: 750px) {
+                display: none;
+            }
+        
+            &:before {
+                display: inline-block;
+                content: '💡';
+                position: absolute;
+                top: 10px;
+                left: 14px;
+            }
+            &:after {
+                display: inline-block;
+                content: '💡';
+                position: absolute;
+                top: 10px;
+                right: 14px;
+            }
+        }
+        
+        .cardContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        
+            .top {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                gap: 40px;
+                @include r(MD) {
+                    gap: 25px;
+                }
+                @include r(MS) {
+                    gap: 10px;
+                }
+            }
+        
+            .timer {
+                text-align: center;
+                color: var(--ion-color-white);
+                font-size: 16px;
+                animation-name: titleOpacity;
+                animation-duration: 2s;
+        
+                @include r(ML) {
+                    font-size: 16px;
+                }
+        
+                @include r(MD) {
+                    font-size: 14px;
+                }
+        
+                span {
+                    color: var(--ion-color-strong-red);
+                }
+            }
+        
+            .bottom {
+                display: flex;
+                justify-content: space-around;
+            }
+        
+            .pictureAnimation {
+                position: relative;
+                animation-name: pictureAnimation;
+                animation-duration: 0.8s;
+            }
+        
+            @include r(ML) {
+                font-size: 14px;
+            }
+        
+            @include r(MD) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    
+    
+    .cancelContainer {
+        position: absolute;
+        bottom: 0;
+    
+        .icon {
+            height: 57px;
+            width: 57px;
+            color: var(--ion-color-strong-red);
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes pictureAnimation {
+    0% {
+        top: 150px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes titleOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

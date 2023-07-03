@@ -1,0 +1,56 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 3px;
+
+    .content {
+        border-radius: 15px;
+        padding: 6px 12px;
+        max-width: 90%;
+    }
+
+    .lastMessageContainer {
+        display: flex;
+        align-items: flex-end;
+        gap: 7px;
+
+        .content {
+            max-width: 83%;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+    }
+
+    &.mine {
+        padding-right: 44px;
+
+        .content {
+            background: rgba(26, 24, 34, 0.07);
+        }
+
+        .lastMessageContainer {
+            margin-right: -36px;
+            justify-content: flex-end;
+        }
+    }
+
+    &.other {
+        padding-left: 44px;
+        align-items: flex-start;
+
+        .content {
+            background: #fbdbd5;
+        }
+
+        .lastMessageContainer {
+            margin-left: -36px;
+        }
+    }
+}

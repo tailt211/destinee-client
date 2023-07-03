@@ -1,0 +1,26 @@
+@import '../../../theme/includes.scss';
+
+.hobbies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 6px 3px;
+
+    &.reverse {
+        justify-content: flex-end;
+    }
+
+    .chip {
+        padding: 2px 6px;
+        color: var(--ion-color-black);
+        font-weight: var(--weight-light-medium);
+        font-size: 13px;
+        background-color: var(--ion-color-green);
+        border-radius: 10px;
+
+        @include r(MD){
+            font-size: 12px
+        }
+    }
+}

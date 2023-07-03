@@ -1,0 +1,6 @@
+export enum FRIEND_REQUEST_PROCESS_STATUS {
+    DEFAULT = 0,
+    ADD_FRIEND = 1,
+    ACCEPTED = 2,
+    DENIED = 3,
+}

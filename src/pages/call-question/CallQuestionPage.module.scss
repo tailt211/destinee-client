@@ -1,0 +1,128 @@
+@import '../../theme/includes';
+
+.container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3vh;
+
+    .voteContainer {
+        width: 100%;
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 23px 30px;
+        margin-top: 15px;
+        background: rgba(0, 0, 0, 0.56);
+        border-radius: 13px;
+
+        .questionHeader {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+
+            span {
+                font-size: 16px;
+                font-weight: var(--weight-light);
+                text-align: center;
+                color: white;
+
+                &.noWrap {
+                    white-space: nowrap;
+                    margin-right: 5px;
+                }
+
+                @include r(MD) {
+                    font-size: 14px;
+                }
+            }
+
+            .timerContainer {
+                display: flex;
+                gap: 3px;
+                align-items: center;
+
+                .clockIcon {
+                    width: 19px;
+                    height: 19px;
+                    
+                    @include r(MS) {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+        .questionContainer {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+
+            .line {
+                width: 44%;
+                border-bottom: 1px solid #5a5a5a;
+                text-align: center;
+            }
+
+            p {
+                color: white;
+                font-weight: var(--weight-bold);
+                font-size: 18px;
+                text-align: center;
+
+                @include r(MD) {
+                    font-size: 17px;
+                }
+
+                @include r(MS) {
+                    font-size: 16px;
+                }
+            }
+
+            .waitingAnnounce {
+                max-width: 280px;
+                color: var(--ion-color-white);
+                text-align: center;
+                margin-top: 12px;
+                font-weight: var(--weight-light);
+            }
+        }
+
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 27px;
+
+        .textTime {
+            font-size: 28px;
+            font-weight: var(--weight-bold);
+            color: var(--ion-color-white);
+
+            @include r(MS) {
+                font-size: 26px;
+            }
+        }
+
+        ion-button {
+            --background: #e44949;
+            --box-shadow: 4px -5px 32px 0px rgba(0, 0, 0, 0.75);
+            --border-radius: 50%;
+            --background-activated: rgba(204, 47, 67, 0.64);
+            --background-hover: rgba(204, 47, 67, 0.8);
+            width: 45px;
+            height: 45px;
+        }
+    }
+}

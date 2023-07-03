@@ -1,0 +1,83 @@
+@import '../../theme/includes';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+
+    @media (max-height: 700px) {
+        gap: 5px;
+    }
+
+    .titleContainer {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 9px;
+
+        p {
+            color: #43b794;
+            font-weight: var(--weight-bold);
+            font-size: 29px;
+            text-align: center;
+            overflow-wrap: anywhere;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            @include r(MD) {
+                font-size: 26px;
+            }
+
+            @include r(MS) {
+                font-size: 23px;
+            }
+        }
+
+        h1 {
+            color: #927B66;
+            font-weight: var(--weight-bold);
+            font-size: 21px;
+            text-align: center;
+            overflow-wrap: anywhere;
+            text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+            @include r(MD) {
+                font-size: 20px;
+            }
+        }
+
+        span {
+            text-align: center;
+            font-family: var(--weight-light);
+            color: white;
+            font-size: 16px;
+            overflow-wrap: anywhere;
+
+            @include r(MS) {
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    .navLink {
+        color: white;
+        font-weight: var(--weight-light);
+        font-size: 16px;
+        text-align: center;
+        overflow-wrap: anywhere;
+        text-decoration: underline;
+
+        @include r(MD) {
+            font-size: 14px;
+        }
+
+        @include r(MS) {
+            font-size: 12px;
+        }
+    }
+}

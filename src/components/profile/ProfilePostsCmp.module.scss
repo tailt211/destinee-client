@@ -1,0 +1,50 @@
+@import '../../theme/includes';
+
+.images {
+    width: 100%;
+    max-width: 465px;
+    margin-top: 22px;
+    padding: 0 10px;
+    padding-bottom: 30px;
+    display: grid;
+    gap: 11px;
+    grid-template-columns: repeat(3, minmax(111px, 130px));
+    justify-content: center;
+    @include r(MD) {
+        grid-template-columns: repeat(auto-fit, 111px);
+    }
+
+    .btnUpload {
+        background-color: var(--ion-color-fun-grey);
+        color: var(--icon-color-white);
+        $iconSize: 24px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        cursor: pointer;
+        height: 195px;
+        
+
+        ion-icon {
+            width: $iconSize;
+            height: $iconSize;
+        }
+        
+        span {
+            font-weight: var(--weight-light);
+            font-size: 13px;
+        }
+    }
+
+    img {
+        height: 195px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: drop-shadow(-4px 5px 32px rgba(0, 0, 0, 0.7));
+        border-radius: 7px;
+    }
+}

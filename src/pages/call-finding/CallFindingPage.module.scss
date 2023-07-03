@@ -1,0 +1,65 @@
+@import '../../theme/includes';
+
+.profilesContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 11px;
+    @include r(ML) {
+        width: 87%;
+    }
+
+    .textMatching {
+        font-size: 16px;
+        font-weight: var(--weight-light);
+        text-align: center;
+        color: var(--ion-color-white);
+
+        @include r(MD) {
+            font-size: 15px;
+        }
+
+        @include r(MS) {
+            font-size: 14px;
+        }
+    }
+}
+
+.line {
+    width: 80%;
+    height: 10px;
+    border-bottom: 1px solid #5a5a5a;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.critetiaContainer {
+    display: block;
+    width: 90%;
+    height: 20vh;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (max-height: 810px) {
+        display: none;
+    }
+}
+
+.stopButtonDiv {
+    margin: 10px auto;
+    width: 115px;
+    height: 46px;
+
+    .stopButton {
+        --background: rgba(204, 47, 67, 0.64);
+        --box-shadow: 4px -5px 32px 0px rgba(0, 0, 0, 0.75);
+        --border-radius: 10px;
+        --background-activated: rgba(204, 47, 67, 0.64);
+        --background-hover: rgba(204, 47, 67, 0.8);
+    }
+}

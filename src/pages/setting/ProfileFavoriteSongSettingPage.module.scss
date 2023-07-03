@@ -1,0 +1,84 @@
+@import '../../theme/includes';
+
+ion-infinite-scroll-content {
+    background: #ffffff38;
+    padding-top: 36px;
+    color: white;
+    height: 77px;
+}
+
+.container {
+    width: 90%;
+    max-width: 420px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    gap: 12px;
+
+    .contentContainer {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        background: #ffffff38;
+        border-radius: 10px;
+        position: relative;
+
+        & > ion-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .emptyList {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            background: #ffffff38;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h2 {
+                width: 95%;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+
+        .content {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .list {
+                background: transparent;
+                height: fit-content;
+                border-radius: 10px 10px 0 0;
+                overflow-y: visible;
+            }
+
+            ion-content.no-scroll-bar::part(scroll) {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+.list {
+    background: #ffffff38;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

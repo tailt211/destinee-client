@@ -1,0 +1,37 @@
+@import '../../theme/includes';
+
+.container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .queueDuration {
+        margin: auto;
+        width: fit-content;
+        background: linear-gradient(180deg,
+                rgba(196, 196, 196, 0) 0%,
+                rgba(58, 175, 169, 0.24) 100%);
+        border-radius: 8px;
+        padding: 11px 10px;
+        font-size: 13px;
+        color: var(--ion-color-white);
+        font-weight: var(--weight-light);
+    }
+
+    ion-button {
+        width: 264px;
+        height: 56px;
+        --box-shadow: 4px -5px 32px rgba(0, 0, 0, 0.75);
+        // --border-radius: 10px;
+        color: white;
+        font-size: 16px;
+        font-weight: var(--weight-light);
+        --background: rgba(var(--ion-color-green-rgb), 0.5);
+        --background-hover: rgba(var(--ion-color-green-rgb), 0.7);
+        --background-active: rgba(var(--ion-color-green-rgb), 0.7);
+        --background-focused: rgba(var(--ion-color-green-rgb), 0.7);
+        --background-activated: rgba(var(--ion-color-green-rgb), 0.7);
+    }
+}

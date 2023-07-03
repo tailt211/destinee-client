@@ -1,0 +1,163 @@
+@import '../../theme/includes';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 80%; // Apply only for non flex: 1
+        gap: 25px;
+        flex: 1;
+
+        .bodyContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow-y: hidden;
+
+            .textContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                span {
+                    text-align: center;
+                    font-family: var(--weight-light-medium);
+                    color: white;
+                    font-size: 14px;
+                    overflow-wrap: anywhere;
+
+                    @include r(MD) {
+                        font-size: 13px;
+                    }
+
+                    @include r(MS) {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .historyCardContainer {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar {
+                    width: 0;
+                    background: transparent;
+                }
+
+                .emptyList {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: rgba(255, 255, 255, 0.2196078431);
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    h2{
+                        width: 100%;
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                    
+                }
+
+                ion-button {
+                    --background: rgba(255, 255, 255, 0.15);
+                    --border-radius: 8px;
+                    --background-activated: rgba(238, 230, 230, 0.15);
+                    --background-hover: rgba(238, 230, 230, 0.15);
+                    width: 99%;
+                    height: 40px;
+                    min-height: 40px;
+                    margin: 0;
+
+                    .textCard {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                        gap: 20px;
+
+                        color: white;
+                        font-size: 14px;
+                        // white-space: pre-wrap;
+
+                        @include r(MD) {
+                            font-size: 13px;
+                        }
+
+                        @include r(MS) {
+                            font-size: 12px;
+                        }
+
+                        span {
+                            font-weight: var(--weight-medium);
+                        }
+
+                        h3 {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-weight: var(--weight-light-medium);
+                            max-width: 165px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   button {
+       background: rgba(0, 255, 242, 0.35);
+       box-shadow: 4px -5px 32px 0px rgba(0, 0, 0, 0.75);
+       border-radius: 10px;
+       width: 200px;
+       max-height: 55px;
+       height: 50px;
+       margin: 30px 0 30px;
+
+       color: white;
+       font-weight: var(--weight-light);
+       font-size: 16px;
+       text-align: center;
+       overflow-wrap: anywhere;
+
+       button:hover {
+           background: rgba(237, 239, 239, 0.35);
+       }
+
+       button:active {
+           background: rgba(79, 145, 141, 0.35);
+       }
+
+       @media (max-height: 700px) {
+           margin: 15px 0 10px;
+       }
+
+       @include r(MD) {
+           width: 170px;
+           height: 49px;
+           font-size: 14px;
+       }
+
+       @include r(MS) {
+           width: 158px;
+           height: 43px;
+           font-size: 13px;
+       }
+   }
+}

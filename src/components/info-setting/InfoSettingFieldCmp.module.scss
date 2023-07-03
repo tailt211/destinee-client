@@ -1,0 +1,25 @@
+@import '../../theme/includes';
+
+.field {
+	ion-item {
+		--background: rgba(255, 255, 255, 0.15);
+		--padding-start: 11px;
+		--inner-padding-end: 7px;
+		border-radius: 9px;
+		color: white;
+		font-size: 14px;
+		margin-top: 11px;
+		--min-height: none;
+
+		ion-label {
+			&:first-child {
+				font-weight: var(--weight-medium);
+			}
+		}
+
+		ion-select {
+			word-wrap: break-word;
+			font-weight: var(--weight-light-medium);
+		}
+	}
+}

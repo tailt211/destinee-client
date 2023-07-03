@@ -1,0 +1,97 @@
+@import '../../theme/includes';
+
+.container {
+    width: 100%; // Dùng lại width của thằng cha sẽ bị out lúc short data
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 7px;
+    gap: 8px;
+
+    &.sameResultDecorator {
+        border: 4px solid #43b794;
+    }
+
+    .imgContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: -12px;
+
+        img {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            object-fit: cover;
+            min-width: 25px;
+        }
+
+        .above {
+            z-index: 1;
+            left: 12px;
+        }
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: var(--weight-bold);
+        text-align: center;
+        color: white;
+        width: 100%;
+        overflow-wrap: anywhere;
+        @include r(MD) {
+            font-size: 16px;
+        }
+
+        @include r(MS) {
+            font-size: 15px;
+        }
+    }
+
+    .answerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        width: 100%;
+
+        .answerRow {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+                min-width: 30px;
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: var(--weight-light);
+                text-align: left;
+                color: white;
+                overflow-wrap: anywhere;
+                width: 100%;
+
+                @include r(MD) {
+                    font-size: 14px;
+                }
+
+                @include r(MS) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

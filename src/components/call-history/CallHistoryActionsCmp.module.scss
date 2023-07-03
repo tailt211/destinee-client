@@ -1,0 +1,42 @@
+@import '../../theme/includes';
+
+.container {
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+
+	@include r(MD) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 40px 40px;
+		gap: 6px;
+	}
+
+	ion-icon {
+		font-size: 20px;
+
+		@include r(MD) {
+			font-size: 16px;
+		}
+	}
+
+	.btnContent {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 15px;
+		font-weight: var(--weight-light-medium);
+		gap: 6px;
+		padding: 8px 5px;
+		@include r(MD) {
+			font-size: 14px;
+			padding: 5px 3px;
+		}
+	}
+
+	button {
+		border-radius: 7px;
+	}
+}

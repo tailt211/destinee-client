@@ -1,0 +1,57 @@
+@import '../../theme/includes';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    cursor: pointer;
+
+    padding: 12px 24px;
+    border-radius: 8px;
+
+    &:hover {
+        background: rgba(169, 169, 169, 0.45);
+    }
+
+    .avatarWrapper {
+        display: flex;
+        flex-direction: column;
+
+        .btnMessage {
+            margin-top: 10px;
+        }
+
+        .avatarLayer {
+            position: relative;
+
+            img {
+                filter: drop-shadow(-4px 5px 32px rgba(0, 0, 0, 0.7));
+                border-radius: 19px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@mixin styling($imageSize) {
+    .avatarWrapper {
+        width: $imageSize;
+
+        .avatarLayer {
+            img {
+                min-width: $imageSize;
+                height: $imageSize;
+            }
+        }
+    }
+}
+
+@include styling(120px);
+
+@include r(ML) {
+    @include styling(110px);
+}
+
+@include r(MS) {
+    @include styling(100px);
+}

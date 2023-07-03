@@ -1,0 +1,131 @@
+@import '../../theme/includes';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    gap: 22px;
+
+    .resultContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+
+        .titleResult {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+
+            p {
+                color: #43b794;
+                font-weight: var(--weight-bold);
+                font-size: 29px;
+                text-align: center;
+                overflow-wrap: anywhere;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                @include r(MD) {
+                    font-size: 26px;
+                }
+
+                @include r(MS) {
+                    font-size: 23px;
+                }
+            }
+
+            span {
+                text-align: center;
+                font-family: var(--weight-light);
+                color: white;
+                font-size: 19px;
+                overflow-wrap: anywhere;
+
+                @include r(MD) {
+                    font-size: 17px;
+                }
+
+                @include r(MS) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .line {
+            width: 80%;
+            border-bottom: 1px solid #5a5a5a;
+            text-align: center;
+        }
+    }
+
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        // padding-bottom: 30px;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: white;
+                left: 0;
+                top: 8px;
+            }
+
+            p {
+                width: 90%;
+                color: white;
+                font-weight: var(--weight-light);
+                font-size: 15px;
+                text-align: left;
+
+                @include r(MD) {
+                    font-size: 14px;
+                }
+
+                @include r(MS) {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        span {
+            text-align: center;
+            font-family: var(--weight-bold);
+            font-weight: 700;
+            color: white;
+            font-size: 20px;
+            overflow-wrap: anywhere;
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            @include r(MD) {
+                font-size: 19px;
+            }
+
+            @include r(MS) {
+                font-size: 18px;
+            }
+        }
+    }
+}

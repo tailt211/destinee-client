@@ -1,0 +1,102 @@
+@import '../../theme/includes';
+
+.container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    .displayContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+        margin-top: 15px;
+        background: rgba(0, 0, 0, 0.56);
+        border-radius: 13px;
+        overflow-y: scroll;
+        position: relative;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
+        &.reverse {
+            flex-direction: column-reverse;
+        }
+
+        .shrinkBtn {
+            white-space: nowrap;
+            text-decoration: underline;
+            font-size: 13px;
+            position: absolute;
+            top: 19px;
+            right: 18px;
+            font-weight: var(--weight-light);
+            color: white;
+            cursor: pointer;
+
+            @include r(MD) {
+                font-size: 12px;
+            }
+
+            @include r(MS) {
+                font-size: 11px;
+            }
+        }
+
+        .answerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7px 0px;
+            gap: 15px;
+            width: 90%;
+        }
+    }
+
+    ion-button {
+        --background: #e44949;
+        --box-shadow: 4px -5px 32px 0px rgba(0, 0, 0, 0.75);
+        --border-radius: 50%;
+        --background-activated: rgba(204, 47, 67, 0.64);
+        --background-hover: rgba(204, 47, 67, 0.8);
+        width: 45px;
+        height: 45px;
+        margin-bottom: 25px;
+
+        @media (max-height: 810px) {
+            display: block;
+        }
+    }
+
+    .collapseAnimate {
+        width: 90%;
+        max-width: 380px;
+        animation: collapseCard .7s ease-in-out forwards;
+    }
+
+    @keyframes collapseCard {
+        0% {
+            height: 100%;
+            opacity: 1;
+            // transform: translateY(25%);
+            position: absolute;
+            // top: 25%;
+            //top: calc(150px);
+        }
+        100% {
+            opacity: 0;
+            height: 0px;
+            visibility: hidden;
+            //transform: translateY(50%);
+            position: absolute;
+            //top: 50%;
+            // top: calc(150px + 3vh);
+        }
+    }
+}

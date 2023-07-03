@@ -1,0 +1,71 @@
+@import '../../theme/includes';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    gap: 15px;
+    margin: 10px 0;
+    height: 100%;
+
+    .content {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    
+        .list {
+            background: rgba(0,0,0,0);
+            height: fit-content;
+            border-radius: 10px 10px 0 0;
+            overflow-y: visible;
+            margin-bottom: 10px;
+        }
+
+        ion-infinite-scroll-content{
+            background : rgba(0,0,0,0)
+        }
+    }
+    
+    h1 {
+        font-size: 18px;
+        font-weight: var(--weight-medium);
+        text-align: center;
+        color: white;
+
+        @include r(MD) {
+            font-weight: var(--weight-light-medium);
+            font-size: 17px;
+        }
+        @include r(MS) {
+            font-weight: var(--weight-light-medium);
+            font-size: 16px;
+        }
+    }
+
+    .listRequest {
+        max-width: 430px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .emptyList {
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+}

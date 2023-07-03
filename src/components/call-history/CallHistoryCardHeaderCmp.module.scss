@@ -1,0 +1,96 @@
+@import '../../theme/includes';
+
+.heading {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.55);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 17px;
+    color: var(--ion-color-black);
+    font-size: 14px;
+    font-weight: var(--weight-medium);
+
+    @include r(MD) {
+        font-size: 14px;
+        font-weight: var(--weight-light-medium);
+        // flex-wrap: wrap;
+        padding: 10px 17px;
+    }
+
+    .infoContainer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+		gap: 13px;
+		@include r(MD) {
+			gap: 0;
+		}
+
+        .userInfo {
+            display: flex;
+            gap: 13px;
+            align-items: center;
+            @include r(MD) {
+                width: 100%;
+            }
+
+            img {
+                $imgSize: 46px;
+                width: $imgSize;
+                height: $imgSize;
+                border-radius: 59px;
+                filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.89));
+                object-fit: cover;
+            }
+
+            span {
+                color: #0a2d3a;
+                width: calc(100% - 55px);
+                max-width: 160px;
+                word-wrap: break-word;
+                font-weight: 700;
+                @include r(ML) {
+                    max-width: 133px;
+                }
+                @include r(MD) {
+                    max-width: 240px;
+                }
+                @include r(MS) {
+                    max-width: 200px;
+                }
+            }
+        }
+
+        .callInfo {
+			max-width: 152px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            margin-left: 5px;
+
+            @include r(MD) {
+                margin-top: 15px;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    ion-icon {
+		margin-left: 10px;
+        font-size: 24px;
+
+        @include r(MD) {
+            font-size: 26px;
+        }
+    }
+}

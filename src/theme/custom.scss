@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+	--ion-font-family: var(--font-default);
+	/* --ion-text-color: var(--ion-color-white); */
+	--ion-background-color: var(--ion-color-bg-dark);
+	// --ion-safe-area-top: 20px;
+	// --ion-safe-area-bottom: 22px;
+}
+
+.infinite-loading {
+	--color: white !important;
+	font-size: 14px !important;
+
+	.infinite-loading-text {
+		color: white !important;
+	}
+}
+
+/* No scroll bar for ion-content */
+ion-content.no-scroll-bar {
+	width: calc(100% + 17px) !important;
+}
+
+ion-content.no-scroll-bar::part(scroll) {
+	// padding-right: 9px; // best for desktop
+	padding-right: 17px; // best for mobile
+}
+
+/* End */
+
+ion-app {
+	max-width: 500px;
+	margin: auto;
+}
+
+.destinee__bg {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background: var(--ion-color-bg-dark);
+}
+
+.destinee__bg::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url('../assets/bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+
+.destinee__container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+
+.hiddenAnimate {
+	opacity: 0;
+	transition: all 1.5s ease-in-out;
+}
+
+.grey__bg {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background: var(--ion-color-strong-grey);
+}
+
+.emptyList {
+	height: 100%;
+	width: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+	justify-content: center;
+	gap: 9px;
+
+	h2 {
+		width: 100%;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	.line {
+		height: 1px;
+		width: 64%;
+		background: #ffffff24;
+	}
+
+	p {
+		font-size: 15px;
+		font-weight: 100;
+		color: #ffffff99;
+		max-width: 286px;
+		text-align: center;
+	}
+}
+
+ion-tab-bar {
+	--background: linear-gradient(83.77deg,
+			rgba(176, 151, 151, 0.623) 42.81%,
+			rgba(251, 219, 213, 0.7) 108.28%);
+	--ion-tab-bar-color: var(--ion-color-black);
+	--ion-tab-bar-color-selected: white;
+	--border: none;
+	box-shadow: 0px -8px 31px 1px rgba(255, 255, 255, 0.2);
+	border-radius: 23px;
+	position: relative;
+	height: 60px;
+	width: 100%;
+	margin-top: -80px;
+	/* 
+		Floating Navbar
+		max-width: 363px;
+		bottom: 2%;
+		left: 50%;
+		transform: translateX(-50%);
+	*/
+}
+
+ion-tab-button {
+	--background: none;
+}
+
+ion-tab-button ion-icon {
+	width: 26px;
+	color: white;
+}
+
+ion-content {
+	z-index: 2;
+	--background: transparent;
+}
+
+ion-header {
+	z-index: 3;
+	--background: transparent;
+}
+
+ion-toolbar {
+	--background: transparent;
+}
+
+ion-backdrop {
+	opacity: 0.7;
+	// z-index: 100;
+}
+
+ion-picker {
+	--background: white !important;
+	// --border-color: #b1b1b1;
+	--border-radius: 13px !important;
+}
+
+.ripple-parent {
+	position: relative;
+	overflow: hidden;
+}
+
+.hide-scroll {
+	overflow: scroll;
+	overflow-x: hidden;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		/* Remove scrollbar space */
+		background: transparent;
+		/* Optional: just make scrollbar invisible */
+	}
+
+	/* Optional: show position indicator in red */
+	&::-webkit-scrollbar-thumb {
+		background: #ff0000;
+	}
+}
+
+.capitalizeFirstLetter {
+	&::first-letter {
+		text-transform: capitalize;
+	}
+}
+
+.customModal {
+	--width: 290px;
+	--height: 380px;
+	--backdrop-opacity: .6;
+	--background: transparent;
+
+	/* 
+		[Hoàn toàn có thể sử dụng cách này nhưng khi mà ta click ra bên ngoài thì bị dánh modal 100% nên k close modal]
+		--height: 100%;
+		.ion-page {
+			justify-content: center;
+		} 
+	*/
+}
+
+[aria-checked=true].sc-ion-alert-ios .alert-checkbox-icon.sc-ion-alert-ios {
+	border-color: var(--ion-color-teal);
+	background-color: var(--ion-color-teal);
+}
+
+button.alert-button.ion-focusable.ion-activatable.sc-ion-alert-ios {
+	color: var(--ion-color-teal);
+}
+
+[aria-checked=true].sc-ion-alert-ios .alert-radio-inner.sc-ion-alert-ios {
+	border-color: var(--ion-color-teal);
+}
+
+[aria-checked=true].sc-ion-alert-ios .alert-radio-label.sc-ion-alert-ios {
+	color: var(--ion-color-teal);
+}

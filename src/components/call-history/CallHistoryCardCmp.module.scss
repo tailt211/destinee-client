@@ -1,0 +1,25 @@
+@import '../../theme/includes';
+
+.cardHistory {
+	margin: 7px 0;
+
+	.historyContent {
+		border-radius: 6px;
+		background: transparent;
+	}
+
+	.cardDetail {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		padding: 20px 15px 7px 15px;
+		background-color: rgba(179, 179, 179, 0.3);
+		color: var(--ion-color-medium-contrast);
+		font-size: 13px;
+		.divider {
+			width: 100%;
+			margin-top: 15px;
+		}
+	}
+}

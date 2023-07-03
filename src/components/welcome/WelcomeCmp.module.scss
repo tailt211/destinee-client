@@ -1,0 +1,103 @@
+@import '../../theme/includes';
+
+.container {
+    width: 90%;
+    max-width: 360px;
+    margin: auto;
+    background: #f7f7f7;
+    border-radius: 17% 7px 7px 50%;
+    color: black;
+    padding: 10px 10px 10px 10px;
+
+    @include r(MS) {
+        border-radius: 7px;
+        padding: 10px;
+    }
+
+    img {
+        width: 200px;
+        margin-top: -50px;
+        margin-left: -34px;
+        object-fit: contain;
+        @include r(MD) {
+            width: 160px;
+        }
+        @include r(MS) {
+            display: none;
+        }
+    }
+
+    .heading {
+        display: flex;
+
+        .contentContainer {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                font-size: 27px;
+                color: rgb(40 40 40);
+                text-shadow: 3px 5px 6px rgb(0 0 0 / 50%);
+                font-weight: 800;
+                text-align: right;
+                word-break: break-word;
+                @include r(MS) {
+                    font-size: 25px;
+                }
+
+                span {
+                    color: var(--ion-color-teal);
+                    text-shadow: 4px 3px 6px rgb(0 0 0 / 30%);
+                    word-break: normal;
+                }
+            }
+        }
+    }
+
+    .description {
+        font-size: 14px;
+        margin-top: 8px;
+        font-weight: 500;
+        color: #464646;
+        text-align: right;
+        @include r(MS) {
+            text-align: justify;
+        }
+    }
+
+    .actionContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+
+        button {
+            flex: 1 1;
+            min-width: 170px;
+            height: 56px;
+            // box-shadow: 4px -5px 32px rgb(0 0 0 / 75%);
+            box-shadow: 3px 2px 8px rgb(0 0 0 / 35%);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: inset 5px 5px 7px rgb(0 0 0 / 30%);
+            }
+
+            &.btnRegister {
+                color: teal;
+                border: 6px solid teal;
+                font-size: 14px;
+                background: white;
+            }
+
+            &.btnLogin {
+                background: teal;
+                color: white;
+            }
+        }
+    }
+}

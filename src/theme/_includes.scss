@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+$MS: 320px;
+$MD: 375px;
+$ML: 425px;
+$MXL: 768px;
+@mixin r($canvas) {
+	@if $canvas == MS {
+		@media only screen and (max-width: $MS) {
+			@content;
+		}
+	} @else if $canvas == MD {
+		@media only screen and (max-width: $MD) {
+			@content;
+		}
+	} @else if $canvas == ML {
+		@media only screen and (max-width: $ML) {
+			@content;
+		}
+	} @else if $canvas == MXL {
+		@media only screen and (max-width: $MXL) {
+			@content;
+		}
+	}
+}

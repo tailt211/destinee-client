@@ -1,0 +1,217 @@
+@import '../../theme/includes';
+
+.container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    .contentContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+        .progressBarContainer {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            width: 80%;
+            gap: 12px;
+    
+            .progressBar {
+                background-color: #fbfbfb;
+                border-radius: 20px;
+                height: 4px;
+    
+                .progress {
+                    background: #43b794;
+                    box-shadow: 0 3px 3px -5px #43b794, 0 1px 4px #43b794;
+                    border-radius: 20px;
+                    height: 100%;
+                    width: 0;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+    
+            span {
+                text-align: center;
+                font-weight: var(--weight-light);
+                color: white;
+                font-size: 16px;
+                overflow-wrap: anywhere;
+    
+                @include r(MD) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .inputForm {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            h3 {
+                font-size: 22px;
+                color: var(--ion-color-green);
+                font-weight: 600;
+                text-align: center;
+                @include r(MD) {
+                    font-size: 22px;
+                }
+            }
+
+            input {
+                background: #e7e7e7;
+                border-radius: 6px;
+                padding: 11px 30px;
+                width: 100%;
+                color: #000000;
+                font-size: 18px;
+                text-align: center;
+                @include r(MD) {
+                    // padding: 13px 30px;
+                    font-size: 16px;
+                }
+            }
+
+            > span {
+                text-align: center;
+                color: #f7f7f7;
+                font-weight: 100;
+                font-size: 15px;
+            }
+
+            ion-select {
+                color: white;
+            }
+
+            .customDatePicker {
+                width: 350px;
+                --background: white;
+                color: black;
+                border-radius: 9px;
+                box-shadow: inset 5px 5px 7px rgb(0 0 0 / 30%);
+            }
+
+            ion-item {
+                --color-hover: rgb(195 195 195 / 60%);
+                --inner-border-width: 0;
+                --background-activated: none;
+                --background-hover: none;
+                border-radius: 9px;
+                color: rgb(141 141 141 / 60%);
+                font-size: 17px;
+                font-weight: 500;
+                --min-height: 32px;
+            }
+        }
+    }
+
+    .skipContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 22px;
+
+        .skip {
+            cursor: pointer;
+            text-align: center;
+            color: #e1e1e1;
+            font-weight: 100;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-shadow: 4px 6px 12px rgb(0 0 0 / 40%);
+        }
+
+        .line {
+            width: 40px;
+            height: 1px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    .btnUpload {
+        background-color: var(--ion-color-fun-grey);
+        color: var(--icon-color-white);
+        $iconSize: 24px;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        cursor: pointer;
+        height: 260px;
+        width: 170px;
+
+        ion-icon {
+            width: $iconSize;
+            height: $iconSize;
+        }
+        
+        span {
+            font-weight: var(--weight-light);
+            font-size: 13px;
+        }
+    }
+
+    .avatar {
+        object-fit: cover;
+        border-radius: 7px;
+        height: 260px;
+        min-width: 170px;
+        max-width: 170px;
+        filter: drop-shadow(-4px 5px 32px rgba(0, 0, 0, 0.7));
+        border: 1px solid rgba(233, 179, 179, 0.1);
+        cursor: pointer;
+    }
+
+    .positionBtnContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+        @include r(MD) {
+            gap: 15px;
+        }
+
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+
+            color: white;
+            font-weight: var(--weight-light);
+            text-decoration: underline;
+            font-size: 18px;
+            @include r(MD) {
+                font-size: 16px;
+            }
+
+            img {
+                width: 25px;
+                @include r(MD) {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}
+
+.alert-message.sc-ion-alert-ios {
+    font-size: 15px;
+}

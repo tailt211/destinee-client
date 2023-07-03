@@ -1,0 +1,6 @@
+export enum MBTI_CATEGORY {
+    ANALYST = 'ANALYST',
+    DIPLOMAT = 'DIPLOMAT',
+    SENTINEL = 'SENTINEL',
+    EXPLORER = 'EXPLORER',
+}

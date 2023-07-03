@@ -1,0 +1,112 @@
+@import '../../theme/includes';
+
+.statusContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 65%;
+
+    .imgContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+            border-radius: 50%;
+            width: 104px;
+            min-width: 104px;
+            height: 104px;
+            object-fit: cover;
+
+            @include r(MD) {
+                width: 100px;
+                min-width: 100px;
+                height: 100px;
+            }
+
+            @include r(MD) {
+                width: 95px;
+                min-width: 95px;
+                height: 95px;
+            }
+        }
+
+        .imgAvtLeft {
+            position: relative;
+            left: 10px;
+            z-index: 10;
+        }
+
+        .imgAvtRight {
+            position: relative;
+            right: 10px;
+        }
+    }
+
+    .resultCircle {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        z-index: 11;
+        margin-top: -40px;
+
+        @include r(MD) {
+            width: 65px;
+            height: 65px;
+        }
+
+        h3 {
+            font-size: 21px;
+            font-weight: var(--weight-bold);
+            color: white;
+            text-align: center;
+            margin: revert;
+
+            @include r(MD) {
+                font-size: 17px;
+            }
+        }
+    }
+
+    .line {
+        width: 85%;
+        border-bottom: 1px solid #5a5a5a;
+        text-align: center;
+    }
+
+    p {
+        font-weight: var(--weight-bold);
+        font-size: 17px;
+        text-align: center;
+        overflow-wrap: anywhere;
+        //width: 100%;
+
+        @include r(MD) {
+            font-size: 15px;
+        }
+
+        @include r(MS) {
+            font-size: 14px;
+        }
+    }
+
+    span {
+        font-size: 21px;
+        font-weight: var(--weight-bold);
+        text-align: center;
+        color: white;
+        overflow-wrap: anywhere;
+        width: 80%;
+
+        @include r(MD) {
+            font-size: 18px;
+        }
+
+        @include r(MD) {
+            font-size: 17px;
+        }
+    }
+}

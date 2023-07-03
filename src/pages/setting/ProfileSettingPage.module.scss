@@ -1,0 +1,19 @@
+@import '../../theme/includes';
+
+.container {
+	width: 90%;
+	max-width: 420px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding-bottom: 10px;
+
+	.infoSettingContainer { 
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}

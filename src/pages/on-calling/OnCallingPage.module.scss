@@ -1,0 +1,80 @@
+@import '../../theme/includes';
+
+.callingContainer {
+    height: 100%;
+    width: 87%;
+    position: relative;
+    margin-top: 3vh;
+
+    ion-accordion {
+        height: 98%;
+    }
+
+    .scrollDown {
+        height: 186px;
+
+        @media (max-height: 700px) {
+            height: 150px;
+        }
+    }
+
+    .suggestWrapper{
+        display: flex;
+        height: 81px;
+        margin: 1.5vh auto;
+    }
+
+    .timeCalling {
+        position: absolute;
+        bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        margin-bottom: 10px;
+
+        p {
+            color: var(--ion-color-white);
+            font-size: 24px;
+            font-weight: var(--weight-bold);
+            text-align: center;
+            margin-bottom: 0.5vh;
+
+            @include r(MD) {
+                font-size: 22px;
+                font-weight: var(--weight-light-medium);
+            }
+        }
+
+        .stopCalling {
+            width: 47px;
+            height: 47px;
+            margin-left: auto;
+            margin-right: auto;
+
+            color: white;
+
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-radius: 50%;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            // bottom: 0;
+
+            .stopCallingButton {
+                font-size: smaller;
+                height: 100%;
+                width: 100%;
+                --border-radius: 100%;
+                --background: var(--ion-color-strong-red);
+                --box-shadow: 4px -5px 32px 0px rgba(0, 0, 0, 0.75);
+                --background-activated: rgba(204, 47, 67, 0.64);
+                --background-hover: rgba(204, 47, 67, 0.8);
+                margin: 0;
+            }
+        }
+    }
+}

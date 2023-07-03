@@ -1,0 +1,122 @@
+@import '../../theme/includes';
+
+.cardWrapper {
+    display: flex;
+    height: 81px;
+    margin: 1.5vh auto;
+
+    .resultSuggestCard {
+        display: flex;
+        font-size: 13px;
+        font-weight: var(--weight-medium);
+        margin: auto;
+        width: 95%;
+        min-height: 80px;
+
+        height: 80px;
+        background: rgba(0, 0, 0, 0.56);
+        box-shadow: -4px 5px 38px rgba(0, 255, 242, 0.35);
+        border-radius: 8px;
+        overflow: hidden;
+        justify-content: center;
+
+        p {
+            text-align: center;
+            align-self: center;
+            font-size: 13px;
+            color: white;
+            width: 93%;
+
+            @include r(MD) {
+                font-size: 11px;
+            }
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+
+        .resultMatchingCard {
+            display: flex;
+            flex-direction: row;
+            color: white;
+            font-size: 14px;
+            width: 95%;
+            justify-content: center;
+            gap: 8px;
+
+            @include r(ML) {
+                font-size: 13px;
+            }
+
+            @include r(MD) {
+                font-size: 11px;
+            }
+
+            .imgContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-left: -12px;
+
+                img {
+                    position: relative;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    min-width: 35px;
+
+                    @include r(MD) {
+                        width: 32px;
+                        height: 32px;
+                        min-width: 32px;
+                    }
+
+                    @include r(MS) {
+                        width: 30px;
+                        height: 30px;
+                        min-width: 30px;
+                    }
+                }
+
+                .above {
+                    z-index: 1;
+                    left: 16px;
+                }
+            }
+
+            .textArea {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 3px;
+                align-self: center;
+                text-align: left;
+
+                .percentMatch {
+                    color: green;
+                    font-weight: var(--weight-bold);
+                }
+
+                .backToResult {
+                    font-weight: var(--weight-light);
+                }
+            }
+        }
+    }
+
+    .cardExpandAnimate {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        top: 0%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: 80vh;
+        transition: height 0.5s ease-in-out;
+    }
+}

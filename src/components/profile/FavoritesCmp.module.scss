@@ -1,0 +1,61 @@
+@import '../../theme/includes.scss';
+
+.favContainer {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+
+    h6 {
+        font-size: 17px;
+
+        @include r(MD) {
+            font-size: 15px;
+        }
+    }
+
+    &.reverseContainer {
+        align-items: flex-end;
+    }
+
+    .emptyLabel {
+        font-size: 13px;
+        font-weight: 400;
+        color: #565656;
+        margin-top: 2px;
+    }
+
+    .favItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 13px;
+        align-items: center;
+        padding-right: 17px;
+
+        img {
+            width: 53px;
+            min-width: 53px;
+            height: 53px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        span {
+            font-weight: var(--weight-light-medium);
+            font-size: 14px;
+
+            @include r(MD) {
+                font-size: 12px;
+            }
+        }
+
+        &.reverseItem {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+    }
+}

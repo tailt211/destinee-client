@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+
+/* .btnSaveModal {
+	@apply 
+} */
+
+@tailwind utilities;

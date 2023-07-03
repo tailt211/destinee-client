@@ -1,0 +1,178 @@
+@import '../../theme/includes';
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+    ion-skeleton-text {
+        // --border-radius: 9999px;
+        --background: white;
+        --background-rgb: 255, 255, 255;
+    }
+    
+    ion-list {
+        width: 100%;
+        background: transparent!important;
+        // background: var(--ion-item-background, var(--ion-background-color, #fff));
+    }
+
+    .ionContent {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .contentContainer {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+                max-width: 460px;
+
+                ion-button {
+                    --padding-start: 0px;
+                    --padding-end: 0px;
+                    border-radius: 2px;
+
+                    &.btn {
+                        font-weight: var(--weight-light);
+                        width: 100%;
+                        font-size: 13px;
+                        border-radius: 30px;
+                        background: #7a7a7a9e;
+                        color: white;
+                        margin-top: 23px;
+                    }
+                }
+
+                .headerContentContainer {
+                    display: flex;
+                    flex-direction: row;
+                    width: 90%;
+
+                    .avatarWrapper {
+                        display: flex;
+                        flex-direction: column;
+
+                        .btnMessage {
+                            font-weight: var(--weight-light);
+                            color: var(--ion-color-white);
+                            width: 100%;
+                            font-size: 13px;
+                            padding: 2px 0;
+                            border: 1px solid var(--ion-color-white);
+                            border-radius: 2px;
+                            margin-top: 10px;
+                        }
+
+                        .avatarLayer {
+                            position: relative;
+                            cursor: pointer;
+
+                            img {
+                                filter: drop-shadow(-4px 5px 32px rgba(0, 0, 0, 0.7));
+                                border-radius: 19px;
+                                object-fit: cover;
+                            }
+
+                            &.upload {
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    display: block;
+                                    width: 29px;
+                                    height: 29px;
+                                    background: url('../../assets/plus-circle.png') center no-repeat;
+                                    background-size: cover;
+                                    bottom: -11px;
+                                    right: -2px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bio {
+                    width: 80%;
+                    max-width: 250px;
+                    margin-top: 24px;
+                    margin-bottom: -11px;
+                    text-align: center;
+                    font-weight: var(--weight-light);
+                    font-size: 14px;
+                    color: white;
+                }
+
+                .btnProfileSetting {
+                    margin-top: 10px;
+                }
+            }
+
+            .tabsAction {
+                $gapSize: 30px;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                // margin-top: calc($gapSize + 25px);
+                margin-top: 22px;
+                gap: 20px;
+
+                a {
+                    color: white;
+                    width: 110px;
+                    text-align: center;
+
+                    &.active {
+                        border-bottom: 2px solid var(--ion-color-white);
+                    }
+
+                    $iconSize: 24px;
+
+                    ion-icon {
+                        width: $iconSize;
+                        height: $iconSize;
+                    }
+                }
+            }
+
+            ion-infinite-scroll-content {
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
+
+@mixin styling($imageSize) {
+    .avatarWrapper {
+        width: $imageSize;
+
+        .avatarLayer {
+            img {
+                min-width: $imageSize;
+                height: $imageSize;
+            }
+        }
+    }
+}
+
+@include styling(120px);
+
+@include r(ML) {
+    @include styling(110px);
+}
+
+@include r(MS) {
+    @include styling(100px);
+}

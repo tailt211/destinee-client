@@ -1,0 +1,111 @@
+@import '../../theme/includes';
+
+.container {
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 66px;
+        color: white;
+        text-align: center;
+
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+
+        img {
+            width: 70px;
+        }
+
+        .status {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .price {
+            font-size: 23px;
+            font-weight: 700;
+            &.success {
+                color: #96c362;
+            }
+            &.fail {
+                color: #ef7a7a;
+            }
+        }
+    }
+
+    .description {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 22px;
+        border-top: 1px solid #ffffff42;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ffffff42;
+            padding: 12px 0;
+            color: white;
+            font-size: 15px;
+
+            span:nth-child(1) {
+                text-align: left;
+            }
+
+            span:nth-child(2) {
+                text-align: right;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .orderContainer {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 22px;
+        gap: 9px;
+        box-shadow: 4px -5px 32px rgb(0 0 0 / 75%);
+        padding: 15px 9px;
+        background: #ffffff3d;
+        border-radius: 9px;
+
+        h1 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--ion-color-green);
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            font-size: 14px;
+        }
+    }
+
+    .finishBtn {
+        width: 200px;
+        min-height: 40px;
+        height: 56px;
+        color: white;
+        margin-top: 44px;
+        background: rgb(255 255 255 / 12%);
+        border: 3px solid var(--ion-color-green);
+        box-shadow: 4px -5px 32px 0px rgb(0 0 0 / 75%);
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: var(--weight-light);
+    }
+}

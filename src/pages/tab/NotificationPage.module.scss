@@ -1,0 +1,86 @@
+@import '../../theme/includes';
+
+.titleContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+    font-weight: var(--weight-medium);
+
+    button {
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        font-size: 12px;
+        font-weight: var(--weight-light);
+        text-decoration: underline;
+    }
+
+    @include r(MS) {
+        width: 90%;
+        font-size: 13px;
+        justify-content: space-between;
+
+        button {
+            position: relative;
+            right: 0;
+        }
+    }
+}
+
+
+.notifications {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-bottom: 10px;
+
+    .content {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        ion-infinite-scroll-content {
+            background: rgba(0, 0, 0, 0);
+        }
+
+        .notificationContainer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .notificationList {
+                width: 90%;
+                gap: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .emptyList {
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+}
